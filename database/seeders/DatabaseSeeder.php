@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Blog;
 use App\Models\Course;
 use Illuminate\Database\Seeder;
 
@@ -20,8 +21,12 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Course::factory()->create(['title' => 'Course A']);
-        Course::factory()->create(['title' => 'Course B']);
-        Course::factory()->create(['title' => 'Course C']);
+        Course::factory()->create(['title' => 'Course A', 'description'=>'This is course A' ]);
+        Course::factory()->create(['title' => 'Course B', 'description'=>'This is course B']);
+        Course::factory()->create(['title' => 'Course C', 'description' => 'This is course C' ]);
+
+        Blog::factory()->create(['title' => 'Blog 1', 'body' => 'Blog 1 Body']);
+        Blog::factory()->create(['title' => 'Blog 2', 'body' => 'Blog 2 Body']);
+        Blog::factory()->create(['title' => 'Blog 3', 'body' => 'Blog 3 Body']);
     }
 }
