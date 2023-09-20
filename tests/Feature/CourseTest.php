@@ -1,12 +1,11 @@
 <?php
 
-
 use App\Models\Course;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 uses(RefreshDatabase::class);
 
-it('only return released courses for released scope' , function () {
+it('only return released courses for released scope', function () {
     $releasedCourse = Course::factory()->released()->create();
     $notReleasedCourse = Course::factory()->create();
 
